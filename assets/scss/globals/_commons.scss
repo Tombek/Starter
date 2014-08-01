@@ -1,0 +1,60 @@
+/* =======================================================================
+	Commons
+======================================================================= */
+
+	//*** User selection settings
+@include selection(){
+	// TODO Change user selection style
+	background-color: $clr-red;
+	color: $clr-white;
+}
+
+	//*** Old browser frame
+.old-browser {
+	// TODO Change look of the old browser frame
+	padding: 20px 0;
+	text-align: center;
+	background-color: $clr-red;
+    font-size: 32px;
+	color: #fff;
+
+    a{
+        color: $clr-white;
+    }
+}
+
+body{
+    font-family: $ff;
+    font-size: $fs-14;
+    line-height: $lh-p;
+    color: $fc-body;
+    overflow-y: scroll;
+}
+
+input, textarea{
+    background: none;
+    border: 1px solid rgba($clr-black, 0.5);
+    resize: none;
+}
+
+ul{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+}
+
+a{
+    color: $fc-action;
+    text-decoration: none;
+    transition: color 250ms ease-in-out 0ms;
+
+    &:hover{ color: $fc-body; }
+}
+b{ font-weight: 600; }
+i{ font-style: italic; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outter-spin-button,{
+    -webkit-appearance: none;
+    margin: 0;
+}

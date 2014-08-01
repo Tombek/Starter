@@ -1,0 +1,51 @@
+/*------------------------------------*\
+	Import libraries & settings
+\*------------------------------------*/
+
+$is-rem: true;
+
+/*------------------------------------*\
+    Import CSS Files
+\*------------------------------------*/
+
+/**
+ * Settings
+ */
+@import 'settings/mixins';
+@import 'settings/variables';
+
+/**
+ * Vendor
+ */
+@import 'vendor/foundation/settings';
+@import 'vendor/foundation';
+
+/**
+ * Commons files
+ */
+@import 'globals/fonts';
+@import 'globals/normalize';
+@import 'globals/commons';
+@import 'globals/animations';
+
+/**
+ * OOCSS
+ */
+@import 'oocss/oocss';
+
+/**
+ * Globals layout
+ */
+@import 'globals/header';
+@import 'globals/footer';
+
+/**
+ * Others
+ */
+@import 'globals/shame';
+
+
+/**
+ * Auto imported scss layout files
+ */
+@import 'layout/homepage';

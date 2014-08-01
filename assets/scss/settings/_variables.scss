@@ -1,0 +1,30 @@
+/* =======================================================================
+	Variables
+======================================================================= */
+
+    //*** Colors
+$clr-white            : #ffffff;
+$clr-black            : #000000;
+$clr-red              : #ff0000;
+
+    //*** Font family (ex : $ff-title: Arial, sans-serif;)
+$ff                   : 'Raleway', sans-serif;
+
+    //*** Font size
+$fs-32                : unit(32);
+$fs-28                : unit(28);
+$fs-24                : unit(24);
+$fs-18                : unit(18);
+$fs-16                : unit(16);
+$fs-14                : unit(14);
+$fs-12                : unit(12);
+
+$fs-body              : $fs-16;
+
+    //*** Line-height
+$lh-p                 : 1.65;
+$lh-h                 : 1.2;
+
+    //*** Font colors
+$fc-body              : $clr-black;
+$fc-action            : $clr-red;
