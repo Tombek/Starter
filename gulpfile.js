@@ -121,8 +121,6 @@ gulp.task('scss', function() {
         .pipe(sass())
         // Autoprefix all css files obtained
         .pipe(autoprefixer("last 2 versions", "> 1%", "Firefox ESR", "Opera 12.1", "ie 8"))
-        // Get stats if in dist mode
-        .pipe(d ? stylestats() : gutil.noop())
         // CSS Shrink all the things if in dist mode
         .pipe(d ? cssshrink() : gutil.noop())
         // Output them in CSS directory
