@@ -5,6 +5,7 @@ My starter project for each front-end development I have to do.
 - Scss
 - JS
 - PHP
+- Foundation
 - CssShrink
 - Imagemin
 - Svgmin
