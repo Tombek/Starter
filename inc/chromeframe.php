@@ -1,1 +1,0 @@
-<script>if (!Modernizr.inlinesvg) document.write('<p class="old-browser">Vous utilisez un navigateur internet <strong>obsolète</strong>. Veuillez <a href="http://browsehappy.com/">mettre à jour celui-ci</a>.</p>')</script>

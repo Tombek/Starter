@@ -1,0 +1,31 @@
+/**
+ * Variables
+ */
+
+// Colors
+$clrWhite            : #ffffff;
+$clrBlack            : #000000;
+$clrRed              : #ff0000;
+
+// Font family
+$ff                   : Arial, Helvetica, sans-serif;
+
+// Line-height
+$lhP                 : 1.65;
+$lhH                 : 1.2;
+
+// Font colors
+$fcBody              : $clrBlack;
+$fcAction            : $clrRed;
+
+// Mediaqueries
+$bpts: (
+  ( "small" ( -1, 40em ) ),
+  ( "medium" ( 40.063em, 64em ) ),
+  ( "large" ( 64.063em, -1 ) )
+);
+
+// Animation
+$animDuration: 500ms;
+$animEasing: cubic-bezier(.55,0,.1,1);
+$anim: #{$animDuration} #{$animEasing};

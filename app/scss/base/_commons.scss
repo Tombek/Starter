@@ -1,0 +1,61 @@
+/**
+ * Commons
+ */
+
+::selection {
+  background: $clrRed;
+  color: $clrWhite;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: $ff;
+  font-size: 1.4rem;
+  line-height: $lhP;
+  color: $fcBody;
+  overflow-y: scroll;
+}
+
+input, textarea{
+    background: none;
+    border: 1px solid rgba($clrBlack, 0.5);
+    resize: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin: 0;
+}
+
+ul{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+}
+
+a{
+    color: $fcAction;
+    text-decoration: none;
+    transition: color 250ms ease-in-out 0ms;
+
+    &:hover{ color: $fcBody; }
+}
+b{ font-weight: 700; }
+i{ font-style: italic; }
+
+input{ -webkit-appearance: none; appearance: none; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outter-spin-button,{
+    -webkit-appearance: none;
+    margin: 0;
+}

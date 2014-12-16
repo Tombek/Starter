@@ -1,0 +1,12 @@
+{
+  "name": "Starter",
+  "version": "0.1.0",
+  "authors": [
+    "Bekaert Thomas <thomas@onemore.fr>"
+  ],
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "normalize.css": "~3.0.2"
+  }
+}

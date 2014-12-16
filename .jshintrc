@@ -1,0 +1,25 @@
+{
+  "strict": false,
+  "unused": false,
+  "globals": {
+    "Starter": false,
+    "Router": false,
+    "console": false,
+    "window": false,
+    "document": false,
+    "google": false
+  },
+  "bitwise": false,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": false,
+  "es3": false,
+  "freeze": false,
+  "immed": true,
+  "latedef": true,
+  "plusplus": false,
+  "quotmark": true,
+  "undef": true,
+  "node": true,
+  "indent": 2
+}

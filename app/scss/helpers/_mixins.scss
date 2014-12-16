@@ -1,0 +1,58 @@
+/**
+ * Mixins
+ */
+
+/**
+ * Use: @include mq(breakpoint){ @content }
+ *
+ * @content: css to include in mediaquery
+ *
+ * @param {List} $args - List of parameters (breakpoint, breakpoint up or only, landscape, etc)
+ */
+@mixin mq($args) {
+    $mq: nth($args, 1);
+
+    @if(length($args)>1){ $type: nth($args, 2); }
+    @else{ $type: "only"; }
+    @if(length($args)>2){ $landscape: true; }
+    @else{ $landscape: false; }
+
+    $bpt-found: false;
+
+    // Loop through the list of breakpoints we’ve provided in our settings file.
+    @each $bpt in $bpts {
+
+        // Grab the alias and the condition from their respective locations in
+        // the list.
+        $alias:     nth($bpt, 1);
+
+        $min-cond:  nth(nth($bpt, 2), 1);
+        @if ($min-cond == -1){ $min-cond: ""; }
+        @else { $min-cond: " and (min-width: #{$min-cond})" };
+
+        $max-cond:  nth(nth($bpt, 2), 2);
+        @if ($max-cond == -1){ $max-cond: ""; }
+        @else { $max-cond: " and (max-width: #{$max-cond})" };
+        
+        @if($type == "up"){ $media: "only screen" + $min-cond; }
+        @else{ $media: "only screen" + $min-cond + $max-cond; }
+
+        @if($landscape){ $media: $media + " and (orientation: landscape)" }
+
+        // If the media query we’ve specified has an alias and a condition...
+        @if $mq == $alias and $min-cond and $max-cond {
+
+            // ...tell the mixin that we’ve found it...
+            $bpt-found: true;
+
+            // ...and spit it out here.
+            @media #{$media} { @content; }
+
+        }
+    }
+
+    // If the user specifies a non-exitent alias, send them a warning.
+    @if $bpt-found == false{
+        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist.";
+    }
+}
