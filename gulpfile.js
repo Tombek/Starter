@@ -6,7 +6,6 @@ var gulp                = require('gulp');
 
 // Tools
 var plumber             = require('gulp-plumber');
-var watch               = require('gulp-watch');
 var bs                  = require('browser-sync');
 var gutil               = require('gulp-util');
 var concat              = require('gulp-concat');
