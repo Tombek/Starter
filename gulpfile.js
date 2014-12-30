@@ -59,7 +59,7 @@ gulp.task('bs-reload', function () { bs.reload(); });
 gulp.task('scss', function() {
   return gulp.src('app/scss/app.scss')
     // Launch plumber if not in dist mode
-    .pipe(config.dist ? gutil.noop() : plumber())
+    .pipe(config.dist ? gutil.noop() : plumber({ errorHandler: onError }))
     // Compile Sass files using libsass
     .pipe(sass())
     // Autoprefix all css files obtained
